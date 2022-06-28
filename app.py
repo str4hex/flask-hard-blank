@@ -22,8 +22,11 @@ def register_exst(app):
     api.add_namespace(genre_ns)
 
 
+
+
 app = create_app(Config())
 app.debug = True
+
 
 if __name__ == '__main__':
     app.run()
