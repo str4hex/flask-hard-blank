@@ -1,4 +1,4 @@
-from model.genre import GenreModel
+from dao.model.genre import GenreModel
 
 
 class GenreDAO:
@@ -10,4 +10,4 @@ class GenreDAO:
         return self.session.query(GenreModel).all()
 
     def get_genre_id(self, gid):
-        return self.session.query.get(gid)
+        return self.session.query(GenreModel).get(gid)

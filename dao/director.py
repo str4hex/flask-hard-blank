@@ -1,4 +1,4 @@
-from model.director import DirectorModels
+from dao.model.director import DirectorModels
 
 
 class DirectorDAO:
@@ -7,7 +7,7 @@ class DirectorDAO:
         self.session = session
 
     def get_director_all(self):
-        return self.session.query.all()
+        return self.session.query(DirectorModels).all()
 
     def get_director_id(self, did):
         return self.session.query(DirectorModels).get(did)
